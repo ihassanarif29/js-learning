@@ -55,13 +55,27 @@ const users = [
 
 //console.log(users[3].email);
 
-console.log(pixellogicUser);
-// Get all keys of the object
-console.log(Object.keys(pixellogicUser));
-// Get all values of the object
-console.log(Object.values(pixellogicUser));
+// console.log(pixellogicUser);
+// // Get all keys of the object
+// console.log(Object.keys(pixellogicUser));
+// // Get all values of the object
+// console.log(Object.values(pixellogicUser));
 
-console.log(Object.entries(pixellogicUser));
+// console.log(Object.entries(pixellogicUser));
 
-console.log(pixellogicUser.hasOwnProperty("isLogedIn"));
-console.log(pixellogicUser.hasOwnProperty("isLoged"));
+// console.log(pixellogicUser.hasOwnProperty("isLogedIn"));
+// console.log(pixellogicUser.hasOwnProperty("isLoged"));
+
+// Deconstruct object
+
+const course = {
+  course_name: "android studio",
+  course_price: 999,
+  course_instructor: "hassan arif",
+};
+
+// const { course_instructor } = course;
+// console.log(course_instructor);
+
+const { course_instructor: instructor } = course;
+console.log(instructor);
