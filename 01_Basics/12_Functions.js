@@ -37,4 +37,23 @@ function loginUserMessage(username = "admin") {
   return `${username} just logged in`;
 }
 
-console.log(loginUserMessage());
+//console.log(loginUserMessage());
+
+function calculateCartPrice(...number) {
+  return number;
+}
+//console.log(calculateCartPrice(100, 200, 300));
+
+const product = {
+  name: "burger",
+  price: 199,
+};
+
+function handleProduct(anyProduct) {
+  console.log(
+    `Product is ${anyProduct.name} and its price is ${anyProduct.price}`,
+  );
+}
+
+//handleProduct(product);
+handleProduct({ name: "sandwitch", price: 299 });
