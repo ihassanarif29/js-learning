@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding With Hassan<</title>
+    <style>
+      .bg-black {
+        background-color: #434242;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <ul class="language">
+      <li>JavaSctipt</li>
+    </ul>
+  </body>
+  <script>
+    // Add Language
+    function addLanguage(languageName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${languageName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("Python");
+    addLanguage("TypeScript");
+
+    function addLanguageOptimized(languageName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(languageName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguageOptimized("Cpp");
+
+    // Edit Language
+    function editLanguage(listItemNumber, newLanguageName) {
+      const selectedlListItem = document.querySelector(
+        `li:nth-child(${listItemNumber})`,
+      );
+      const newListItem = document.createElement("li");
+      newListItem.textContent = "Mojo";
+      selectedlListItem.replaceWith(newListItem);
+    }
+    editLanguage(3, "CSharp");
+
+    // Remove Language
+    function removeLanguage(listItemNumber) {
+      const selectedlListItem = document.querySelector(
+        `li:nth-child(${listItemNumber})`,
+      );
+      selectedlListItem.remove();
+    }
+    removeLanguage(3);
+  </script>
+</html>
